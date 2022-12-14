@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-    
+
 <head>
     <meta charset="UTF-8">
     <title>ecobb</title>
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">  
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Variables
@@ -18,7 +18,7 @@
                     nombre: 'serum',
                     precio: 100,
                     imagen: 'serum-facial.jpg'
-              
+
                 },
                 {
                     id: 2,
@@ -75,7 +75,7 @@
                     miNodoBoton.textContent = '+';
                     miNodoBoton.setAttribute('marcador', info.id);
                     miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-                    
+
                     miNodoCardBody.appendChild(miNodoImagen);
                     miNodoCardBody.appendChild(miNodoTitle);
                     miNodoCardBody.appendChild(miNodoPrecio);
@@ -126,19 +126,19 @@
                     miNodo.appendChild(miBoton);
                     DOMcarrito.appendChild(miNodo);
                 });
-                
+
                 DOMtotal.textContent = calcularTotal();
             }
 
-            
+
             function borrarItemCarrito(evento) {
-                
+
                 const id = evento.target.dataset.item;
-            
+
                 carrito = carrito.filter((carritoId) => {
                     return carritoId !== id;
                 });
-                
+
                 renderizarCarrito();
             }
 
@@ -146,11 +146,11 @@
             function calcularTotal() {
 
                 return carrito.reduce((total, item) => {
-                   
+
                     const miItem = baseDeDatos.filter((itemBaseDatos) => {
                         return itemBaseDatos.id === parseInt(item);
                     });
-                    
+
                     return total + miItem[0].precio;
                 }, 0).toFixed(2);
             }
@@ -158,16 +158,16 @@
 
 
             function vaciarCarrito() {
-              
+
                 carrito = [];
-              
+
                 renderizarCarrito();
             }
 
-           
+
             DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
-           
+
             renderizarProductos();
             renderizarCarrito();
         });
@@ -192,14 +192,14 @@
     <div class="container">
         <div class="row">
             <main id="items" class="col-sm-8 row"></main>
-         
+
             <aside class="col-sm-4">
-                <h2>Carrito</h2>
-                
+                <h2>EcoCarrito</h2>
+
                 <ul id="carrito" class="list-group"></ul>
                 <hr>
-              
-                <p class="text-right">Total: <span id="total"></span>&euro;</p>
+
+                <p class="text-right">Total: <span id="total"></span>pesos;</p>
                 <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
             </aside>
         </div>

@@ -50,11 +50,11 @@ function renderizarProductos() {
         const miNodoImagen = document.createElement('img');
         miNodoImagen.classList.add('img-fluid');
         miNodoImagen.setAttribute('src', info.imagen);
-        // Precio
+        
         const miNodoPrecio = document.createElement('p');
         miNodoPrecio.classList.add('card-text');
         miNodoPrecio.textContent = `${info.precio}${divisa}`;
-        // Boton 
+        
         const miNodoBoton = document.createElement('button');
         miNodoBoton.classList.add('btn', 'btn-primary');
         miNodoBoton.textContent = '+';
