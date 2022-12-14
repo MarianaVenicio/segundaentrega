@@ -1,0 +1,27 @@
+
+.header-conteiner {
+    background-color: rgb(193, 231, 193);
+    margin: 10px;
+    padding: 20px;
+    font-size: 0%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-decoration: underline;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .h1 {
+    display: flex;
+    color: rgb(14, 40, 45);
+    text-align: center;
+    text-decoration: underline;
+    font-style: oblique;
+    background-color: rgb(95, 160, 138);
+  }
+  
+  
