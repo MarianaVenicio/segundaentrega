@@ -1,7 +1,7 @@
 
 let usuario= prompt("deseas ser ecofriendly? si o no");
 while(usuario!="si"){
-    alert("el planeta lo agradece..;egoista");
+    alert("el planeta lo agradece...egoista");
     usuario=prompt("nos queda poco tiempo; di que si");}
     alert("bienvenido, ser eco es la unica y verdadera opcion");
 
